@@ -2,6 +2,26 @@
 
 A personal Grand Exchange planner. It suggests offers for your GE slots, tracks buy limits, and compares your results with the plan. It only reads public price data and never touches the game client: you place every offer yourself.
 
+## Screenshots
+
+Plan your GE slots, then track your open trades against break-even and the current market.
+
+![Planner with suggested GE slots, open trades, and ranked items](docs/screenshots/planner.png)
+
+Open any item to see its price chart, the suggested offers, and why it does or doesn't qualify.
+
+![Item window with a price chart and plan details](docs/screenshots/item-chart.png)
+
+Search every item on the Grand Exchange, including ones the rankings leave out.
+
+![Item search results](docs/screenshots/search.png)
+
+Compare what you made with what the plan expected, by strategy and by item.
+
+![Trade log with planned and actual profit](docs/screenshots/trade-log.png)
+
+The screenshots use live prices and sample trades.
+
 ## Install it
 
 Download the latest `OSRS-Merch-Planner-Setup` file from the [Releases page](https://github.com/williamstylerg/OSRS_Merching_Tool/releases) and run it. The installer isn't code-signed, so Windows may show a SmartScreen warning: choose **More info**, then **Run anyway**.

@@ -56,7 +56,7 @@ app.whenReady().then(() => {
     webPreferences: { preload: path.join(__dirname, 'preload.js'), contextIsolation: true, nodeIntegration: false },
   });
   win.webContents.setWindowOpenHandler(({ url }) => { shell.openExternal(url); return { action: 'deny' }; });
-  win.loadFile('index.html');
+  win.loadFile(path.join(__dirname, 'index.html'));
   win.webContents.once('did-finish-load', startData);
 });
 app.on('window-all-closed', () => app.quit());

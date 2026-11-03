@@ -9,7 +9,8 @@
     "start": "electron .",
     "test": "node --test \"test/*.test.js\"",
     "smoke:live": "node test/live-smoke.js",
-    "dist": "electron-builder --win --publish never"
+    "dist": "electron-builder --win --publish never",
+    "screenshots": "electron scripts/capture.js"
   },
   "devDependencies": {
     "electron": "^45.2.1",
