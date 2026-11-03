@@ -2,7 +2,11 @@
 
 A personal Grand Exchange planner. It suggests offers for your GE slots, tracks buy limits, and compares your results with the plan. It only reads public price data and never touches the game client: you place every offer yourself.
 
-## Run it
+## Install it
+
+Download the latest `OSRS-Merch-Planner-Setup` file from the [Releases page](https://github.com/williamstylerg/OSRS_Merching_Tool/releases) and run it. The installer isn't code-signed, so Windows may show a SmartScreen warning: choose **More info**, then **Run anyway**.
+
+## Run it from source
 
     npm install
     npm start

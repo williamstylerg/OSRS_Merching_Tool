@@ -9,7 +9,7 @@
     "start": "electron .",
     "test": "node --test \"test/*.test.js\"",
     "smoke:live": "node test/live-smoke.js",
-    "dist": "electron-builder --win"
+    "dist": "electron-builder --win --publish never"
   },
   "devDependencies": {
     "electron": "^45.2.1",
@@ -23,14 +23,28 @@
       "preload.js",
       "index.html",
       "styles.css",
+      "assets/icon.png",
       "src/**/*",
       "src-main/**/*"
     ],
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "artifactName": "OSRS-Merch-Planner-Setup-${version}.${ext}"
     }
   },
   "allowScripts": {
     "electron@45.2.1": true
+  },
+  "author": "williamstylerg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/williamstylerg/OSRS_Merching_Tool.git"
   }
 }

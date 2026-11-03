@@ -52,6 +52,7 @@ app.whenReady().then(() => {
   win = new BrowserWindow({
     width: 1360, height: 900, minWidth: 980, minHeight: 640,
     backgroundColor: '#231c15', title: 'OSRS Merch Planner', autoHideMenuBar: true,
+    icon: path.join(__dirname, 'assets', 'icon.png'),
     webPreferences: { preload: path.join(__dirname, 'preload.js'), contextIsolation: true, nodeIntegration: false },
   });
   win.webContents.setWindowOpenHandler(({ url }) => { shell.openExternal(url); return { action: 'deny' }; });
