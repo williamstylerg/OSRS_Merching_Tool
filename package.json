@@ -1,0 +1,36 @@
+{
+  "name": "osrs-merch-planner",
+  "productName": "OSRS Merch Planner",
+  "version": "0.1.0",
+  "description": "Personal Grand Exchange merching planner for Old School RuneScape",
+  "main": "main.js",
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test \"test/*.test.js\"",
+    "smoke:live": "node test/live-smoke.js",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^45.2.1",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "com.osrs.merchplanner",
+    "productName": "OSRS Merch Planner",
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "styles.css",
+      "src/**/*",
+      "src-main/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "allowScripts": {
+    "electron@45.2.1": true
+  }
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://oldschool.runescape.wiki; style-src 'self'">
+  <title>OSRS Merch Planner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="modes" role="radiogroup" aria-label="Strategy" id="modes"></div>
+    <div class="fields">
+      <label>Cash <input id="cash" inputmode="text" autocomplete="off" aria-describedby="cash-hint"></label>
+      <label>Max per item
+        <select id="exposure">
+          <option value="0.2">20%</option><option value="0.35">35%</option>
+          <option value="0.5">50%</option><option value="1">100%</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" id="members"> Members</label>
+    </div>
+    <div class="finder">
+      <input id="find" type="search" placeholder="Find any item" aria-label="Find any item" autocomplete="off" spellcheck="false">
+      <div id="find-results" class="find-results" hidden></div>
+    </div>
+    <div class="freshness" id="freshness" role="status"></div>
+  </header>
+  <nav class="tabs" id="tabs" aria-label="Sections"></nav>
+  <div id="banner" class="banner" hidden role="alert"></div>
+  <main id="main"></main>
+  <dialog id="dialog"></dialog>
+  <script src="src/format.js"></script>
+  <script src="src/chart.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>

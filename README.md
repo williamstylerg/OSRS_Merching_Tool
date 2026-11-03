@@ -1,0 +1,32 @@
+# OSRS Merch Planner
+
+A personal Grand Exchange planner. It suggests offers for your GE slots, tracks buy limits, and compares your results with the plan. It only reads public price data and never touches the game client: you place every offer yourself.
+
+## Run it
+
+    npm install
+    npm start
+
+## Check it
+
+    npm test            # calculation and data tests, no network
+    npm run smoke:live  # checks the real Wiki price API and prints sample rankings
+
+## Build an installer
+
+    npm run dist
+
+Test the installed app, not just `npm start`, before relying on a build.
+
+## How it fits together
+
+- `src-main/engine/`: tax, strategy settings, scoring, slot planning, and trade maths. No Electron or network code.
+- `src-main/services/`: Wiki price client and cache, saved data, and the view sent to the interface.
+- `main.js`, `preload.js`: Electron window and the bridge to the interface.
+- `index.html`, `styles.css`, `src/`: the interface. There is no build step.
+
+To tune a strategy, edit `src-main/engine/modes.js`. Tax rules and exempt items are in `src-main/engine/tax.js`.
+
+Your data is in `%APPDATA%\OSRS Merch Planner`: `planner-data.json` has your settings and trades, and `price-cache.json` can be safely deleted.
+
+Prices come from the [OSRS Wiki real-time prices API](https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices).
